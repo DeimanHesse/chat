@@ -1,0 +1,236 @@
+@charset "UTF-8";
+body::-webkit-scrollbar {
+  width: 15px;
+  cursor: pointer;
+}
+body::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  -webkit-box-shadow: inset 5px 5px 9px rgba(0, 0, 0, 0.349);
+}
+body::-webkit-scrollbar-thumb:hover {
+  cursor: pointer;
+}
+
+.app {
+  background-color: #f5f7fb;
+  height: 100Vh;
+}
+
+.pages {
+  width: 100%;
+  height: 90%;
+  display: flex;
+}
+
+._container {
+  max-width: 1300px;
+  margin: 0 auto;
+}
+
+.navigation {
+  font-size: 20px;
+  font-weight: 600;
+  color: black;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.444);
+  text-transform: uppercase;
+  padding: 0px 20px;
+  height: 10%;
+  margin: 0px 20px;
+}
+.navigation__inner {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.navigation__logout {
+  cursor: pointer;
+}
+
+.general {
+  display: flex;
+  background-color: #f5f7fb;
+}
+
+.auth {
+  align-self: center;
+  margin: 0 auto;
+  width: 500px;
+  padding: 30px 0px;
+  border-radius: 20px;
+  background-color: #4e426e;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transform: translateY(-50px);
+}
+.auth__title {
+  font-size: 30px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+.auth__input {
+  border-radius: 10px;
+  border: none;
+  outline: none;
+  width: 70%;
+  height: 50px;
+  font-size: 18px;
+  background-color: #f5f7fb;
+  margin-bottom: 20px;
+}
+.auth__input:nth-last-child(2) {
+  margin-bottom: 30px;
+}
+.auth__button {
+  height: 50px;
+  border-radius: 10px;
+  min-width: 20%;
+}
+
+.chat {
+  display: flex;
+  height: 90Vh;
+  width: 100%;
+}
+
+.userList {
+  transform: translateY(-30px);
+  width: 30%;
+  padding: 50px 30px;
+  background-color: #ffffff;
+  margin: 50px 30px;
+  border-radius: 20px;
+}
+
+.user {
+  background-color: #ffffff;
+  border-radius: 15px;
+  margin-bottom: 10px;
+  padding: 20px;
+  text-align: center;
+  font-size: 20px;
+  border-bottom: 2px solid #f5f7fb;
+  font-weight: 600;
+}
+
+.messaging {
+  transform: translateY(-30px);
+  width: 70%;
+  padding: 50px 30px;
+  margin: 50px 30px;
+  border-radius: 20px;
+  background-color: #ffffff;
+}
+
+.messageField {
+  height: 80%;
+  width: 100%;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  margin-bottom: 20px;
+}
+.messageField::-webkit-scrollbar {
+  width: 8px;
+  cursor: pointer;
+}
+.messageField::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  -webkit-box-shadow: inset 1px 2px 5px rgba(0, 0, 0, 0.349);
+}
+.messageField::-webkit-scrollbar-thumb:hover {
+  background: #ef0606;
+  /* ползунок меняет цвет при наведении */
+  cursor: pointer;
+}
+
+@keyframes warning {
+  0% {
+    transform: translateX(50px);
+    opacity: 0;
+  }
+  50% {
+    Text-shadow: 0 0 20px #000000;
+  }
+  100% {
+    transform: translateX(0px);
+    opacity: 1;
+  }
+}
+@keyframes warningMe {
+  0% {
+    transform: translateX(-50px);
+    opacity: 0;
+  }
+  50% {
+    Text-shadow: 0 0 20px #000000;
+  }
+  100% {
+    transform: translateX(0px);
+    opacity: 1;
+  }
+}
+.message {
+  width: 95%;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+.message__inner {
+  min-width: 15%;
+  max-width: 60%;
+  align-self: flex-start;
+  background-color: #f5f7fb;
+  border-radius: 15px;
+  padding: 10px;
+  animation: warningMe 0.3s ease-in;
+}
+.message__inner.me {
+  align-self: flex-end;
+  background-color: #4c406d;
+  color: #f5f7fb;
+  animation: warning 0.3s ease-in;
+}
+.message__title {
+  font-size: 13px;
+  font-weight: 700;
+}
+.message__text {
+  width: 100%;
+  font-size: 16px;
+  word-wrap: break-word;
+  word-break: break-all;
+  /* более приоритетно */
+}
+.message__service {
+  font-weight: 600;
+}
+
+.messageForm {
+  height: 10%;
+  display: flex;
+  justify-content: space-between;
+}
+.messageForm__input {
+  border-radius: 10px;
+  border: none;
+  outline: none;
+  width: 70%;
+  height: 50px;
+  font-size: 18px;
+  background-color: #f5f7fb;
+}
+.messageForm__button {
+  width: 20%;
+  height: 50px;
+  border-radius: 10px;
+  border: none;
+  transition: 0.4s;
+  cursor: pointer;
+}
+.messageForm__button:hover {
+  background-color: red;
+  color: #ffffff;
+}
